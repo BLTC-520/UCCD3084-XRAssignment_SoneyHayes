@@ -36,16 +36,25 @@ Assets/
 - `LiquidSpawner.cs` - Chemical spill simulation
 - `SmoothGrabInteractable.cs` - Enhanced VR object interaction
 
+## Flammable Substance Simulation
 
-## Pyrophoric Substance Simulation
+To enhance both realism and safety training value, the simulation incorporates **flammable liquid fires**—specifically **Ethanol \[C₂H₅OH]**. Ethanol is widely used in chemical factories and is a common industrial hazard.
 
-To enhance scientific accuracy and immersion, the simulation incorporates **pyrophoric substances**—materials that ignite spontaneously on contact with air, passing fires to the boxes. (The boxes surface are flammable.)
+### Implementation in Unity
 
-We model **Triethylaluminum \[Al(C₂H₅)₃]**, a real-world aerospace ignition chemical.
+* **Trigger Logic**: Ignition occurs when ethanol is exposed to a spark or flame in an oxygenated environment.
+* **Visual Effects**: Bright flame with semi-transparent heat distortion and light smoke.
+* **Extinguishing Mechanics**: Fire can be put out with a **CO₂ extinguisher**, teaching proper equipment usage.
+
+This setup provides:
+
+* **Scientific Accuracy** – Based on real combustion chemistry.
+* **Gameplay Value** – Players practice matching the right extinguisher to the correct hazard.
+* **Educational Benefit** – Reinforces fire safety training relevant to real factory environments.
 
 ## Technical Stack
 
-* **Engine**: Unity 2022.3+ (URP)
+* **Engine**: Unity 2022.3.62f1 (URP)
 * **Framework**: XR Interaction Toolkit 2.6.4
 * **Platforms**: PICO (Android), PC VR (OpenXR)
 * **Physics**: Unity Physics for object interactions
